@@ -4,15 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{83E71336-E996-40D2-ABF8-8F856EB45024}</ProjectGuid>
+    <ProjectGuid>{07BB69E3-EF1A-4A1C-A96E-ACDC2B2AF1E8}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_02.Cars</RootNamespace>
-    <AssemblyName>02.Cars</AssemblyName>
+    <RootNamespace>_04.Telephony</RootNamespace>
+    <AssemblyName>04.Telephony</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -44,13 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Car.cs" />
-    <Compile Include="Models\Interfaces\ICar.cs" />
-    <Compile Include="Models\Interfaces\IElectricCar.cs" />
-    <Compile Include="Models\Seat.cs" />
-    <Compile Include="Models\Tesla.cs" />
+    <Compile Include="Models\Interfaces\IBrowseable.cs" />
+    <Compile Include="Models\Interfaces\ICallable.cs" />
+    <Compile Include="Models\Smartphone.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\Validator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

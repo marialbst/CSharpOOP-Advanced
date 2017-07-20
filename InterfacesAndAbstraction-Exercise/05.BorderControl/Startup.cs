@@ -9,8 +9,6 @@
     {
         public static void Main(string[] args)
         {
-
-
             ICollection<ISocietyMember> society = ReadMembers();
             string fakeIdEnding = Console.ReadLine();
 

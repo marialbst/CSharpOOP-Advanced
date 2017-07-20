@@ -34,7 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Starup</StartupObject>
+    <StartupObject>_03.Ferrari.Startup</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -49,8 +49,8 @@
   <ItemGroup>
     <Compile Include="Models\Car.cs" />
     <Compile Include="Models\Ferrari.cs" />
-    <Compile Include="Models\Interfaces\ICar.cs" />
-    <Compile Include="Starup.cs" />
+    <Compile Include="Interfaces\ICar.cs" />
+    <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,7 +1,12 @@
-﻿public class Ferrari : Car
+﻿namespace _03.Ferrari.Models
 {
-    public Ferrari(string driver) :
-        base("488-Spider", driver)
+    using Interfaces;
+
+    public class Ferrari : Car
     {
+        public Ferrari(string driver) :
+            base("488-Spider", driver)
+        {
+        }
     }
 }

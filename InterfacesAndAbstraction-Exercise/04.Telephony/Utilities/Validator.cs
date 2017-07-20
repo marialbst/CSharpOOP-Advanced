@@ -1,18 +1,19 @@
-﻿using System;
-using System.Text.RegularExpressions;
-
-
-public static class Validator
+﻿namespace _04.Telephony.Utilities
 {
-    public static bool ValidateWebsite(string input)
-    {
-        var regex = new Regex("[0-9]");
-        return regex.IsMatch(input);
-    }
+    using System.Text.RegularExpressions;
 
-    public static bool ValidateNumber(string input)
+    public static class Validator
     {
-        var regex = new Regex("[^0-9]");
-        return regex.IsMatch(input);
+        public static bool ValidateWebsite(string input)
+        {
+            var regex = new Regex("[0-9]");
+            return regex.IsMatch(input);
+        }
+
+        public static bool ValidateNumber(string input)
+        {
+            var regex = new Regex("[^0-9]");
+            return regex.IsMatch(input);
+        }
     }
 }

@@ -1,11 +1,16 @@
-﻿public class Citizen : IPerson
+﻿namespace _01.IPerson.Models
 {
-    public Citizen(string name, int age)
-    {
-        this.Name = name;
-        this.Age = age;
-    }
-    public int Age { get; private set; }
+    using Interfaces;
 
-    public string Name { get; private set; }
+    public class Citizen : IPerson
+    {
+        public Citizen(string name, int age)
+        {
+            this.Name = name;
+            this.Age = age;
+        }
+        public int Age { get; private set; }
+
+        public string Name { get; private set; }
+    }
 }

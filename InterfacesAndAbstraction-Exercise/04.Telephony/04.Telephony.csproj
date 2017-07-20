@@ -43,8 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Interfaces\IBrowseable.cs" />
-    <Compile Include="Models\Interfaces\ICallable.cs" />
+    <Compile Include="Interfaces\IBrowseable.cs" />
+    <Compile Include="Interfaces\ICallable.cs" />
     <Compile Include="Models\Smartphone.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

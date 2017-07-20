@@ -7,7 +7,7 @@ public class Circle : IDrawable
         this.Radius = radius;
     }
 
-    public int Radius { get; set; }
+    public int Radius { get; private set; }
 
     public void Draw()
     {

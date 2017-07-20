@@ -1,20 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-class Startup
+﻿namespace _04.Telephony
 {
-    static void Main(string[] args)
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Models;
+
+    public class Startup
     {
-        List<string> numbersSeq = Console.ReadLine()
-            .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-            .ToList();
-        List<string> sitesSeq = Console.ReadLine()
-            .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-            .ToList();
+        public static void Main(string[] args)
+        {
+            List<string> numbersSeq = Console.ReadLine()
+                .Split()
+                .ToList();
+            List<string> sitesSeq = Console.ReadLine()
+                .Split()
+                .ToList();
 
-        Smartphone phone = new Smartphone(sitesSeq,numbersSeq);
+            Smartphone phone = new Smartphone(sitesSeq, numbersSeq);
 
-        Console.WriteLine(phone.ToString());
+            Console.WriteLine(phone.ToString());
+        }
     }
 }

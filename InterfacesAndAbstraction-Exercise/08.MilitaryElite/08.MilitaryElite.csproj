@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{404B1094-247F-42CB-A95E-BD27463D04A3}</ProjectGuid>
+    <ProjectGuid>{4C675536-6D6F-4DC0-A972-9BDD3DCE6F5E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_07.FoodShortage</RootNamespace>
-    <AssemblyName>07.FoodShortage</AssemblyName>
+    <RootNamespace>_08.MilitaryElite</RootNamespace>
+    <AssemblyName>08.MilitaryElite</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,20 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\IBirthdate.cs" />
-    <Compile Include="Interfaces\IBuyer.cs" />
-    <Compile Include="Interfaces\IHuman.cs" />
-    <Compile Include="Interfaces\ISocietyMember.cs" />
-    <Compile Include="Models\People\Citizen.cs" />
-    <Compile Include="Models\Human.cs" />
-    <Compile Include="Models\Pet.cs" />
-    <Compile Include="Models\People\Rebel.cs" />
-    <Compile Include="Models\Robot.cs" />
+    <Compile Include="Core\Engine.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

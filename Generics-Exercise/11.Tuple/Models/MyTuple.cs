@@ -15,7 +15,7 @@
 
         public override string ToString()
         {
-            return this.Item1.ToString() + " -> " + this.Item2.ToString();
+            return $"{this.Item1} -> {this.Item2}";
         }
     }
 }

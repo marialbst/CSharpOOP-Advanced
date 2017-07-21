@@ -11,9 +11,9 @@
             MyTuple<string, int> beer = ReadBeerDrink();
             MyTuple<int, double> numbers = ReadNumbers();
             
-            Console.WriteLine(person.ToString());
-            Console.WriteLine(beer.ToString());
-            Console.WriteLine(numbers.ToString());
+            Console.WriteLine(person);
+            Console.WriteLine(beer);
+            Console.WriteLine(numbers);
 
         }
 

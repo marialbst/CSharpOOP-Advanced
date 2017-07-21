@@ -1,22 +1,21 @@
-﻿namespace _09.Tuple.Models
+﻿namespace _11.Tuple.Models
 {
-    using Interfaces;
+    using Intefaces;
 
-    public class Tuple<T, U> : ITuple<T, U>
+    public class MyTuple<T, U> : IMyTuple<T, U>
     {
-        public Tuple(T item1, U item2)
+        public MyTuple(T item1, U item2)
         {
             this.Item1 = item1;
             this.Item2 = item2;
         }
 
         public T Item1 { get; private set; }
-
         public U Item2 { get; private set; }
 
         public override string ToString()
         {
-            return $"{this.Item1} -> {this.Item2}";
+            return this.Item1.ToString() + " -> " + this.Item2.ToString();
         }
     }
 }

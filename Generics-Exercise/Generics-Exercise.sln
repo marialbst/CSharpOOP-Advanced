@@ -9,7 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-07.GenericCountMethod", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08-10.CustomList", "08-10.CustomList\08-10.CustomList.csproj", "{9FF51809-41D2-4D4C-98F4-7574F6BE1DC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.Tuple", "09.Tuple\09.Tuple.csproj", "{6339B55F-0DE0-4BCB-B956-449CCB85DF86}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.Tuple", "11.Tuple\11.Tuple.csproj", "{6339B55F-0DE0-4BCB-B956-449CCB85DF86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.Threeple", "12.Threeple\12.Threeple.csproj", "{029D4AE7-12F5-4E67-BD40-C121E5D1004C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{6339B55F-0DE0-4BCB-B956-449CCB85DF86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6339B55F-0DE0-4BCB-B956-449CCB85DF86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6339B55F-0DE0-4BCB-B956-449CCB85DF86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{029D4AE7-12F5-4E67-BD40-C121E5D1004C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{029D4AE7-12F5-4E67-BD40-C121E5D1004C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{029D4AE7-12F5-4E67-BD40-C121E5D1004C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{029D4AE7-12F5-4E67-BD40-C121E5D1004C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

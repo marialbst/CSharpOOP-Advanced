@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6535A807-A614-4E92-884F-79ADE1E44167}</ProjectGuid>
+    <ProjectGuid>{8B129DE1-F8A6-4483-BF1D-4280877269CC}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_09.CollectionHierarchy</RootNamespace>
-    <AssemblyName>09.CollectionHierarchy</AssemblyName>
+    <RootNamespace>_01.Box</RootNamespace>
+    <AssemblyName>01.Box</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,13 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\Engine.cs" />
-    <Compile Include="Interfaces\IAddCollection.cs" />
-    <Compile Include="Interfaces\IAddRemoveCollection.cs" />
-    <Compile Include="Interfaces\IMyList.cs" />
-    <Compile Include="Models\AddCollection.cs" />
-    <Compile Include="Models\AddRemoveCollection.cs" />
-    <Compile Include="Models\MyList.cs" />
+    <Compile Include="Intefaces\IBox.cs" />
+    <Compile Include="Models\Box.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

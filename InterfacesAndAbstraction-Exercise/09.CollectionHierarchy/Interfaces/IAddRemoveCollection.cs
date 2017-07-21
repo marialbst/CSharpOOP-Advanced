@@ -1,7 +1,7 @@
 ﻿namespace _09.CollectionHierarchy.Interfaces
 {
-    public interface IAddRemoveCollection<Type> : IAddCollection<Type>
+    public interface IAddRemoveCollection<T> : IAddCollection<T>
     {
-        void Remove(Type item);
+        T Remove();
     }
 }

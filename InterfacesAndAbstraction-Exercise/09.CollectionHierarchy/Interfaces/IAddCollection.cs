@@ -1,7 +1,7 @@
 ﻿namespace _09.CollectionHierarchy.Interfaces
 {
-    public interface IAddCollection<Type>
+    public interface IAddCollection<T>
     {
-        void Add(Type item);
+        int Add(T item);
     }
 }

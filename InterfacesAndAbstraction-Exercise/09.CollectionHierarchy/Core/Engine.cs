@@ -41,7 +41,7 @@
             PrintResults(this.myListRemoveRes);
         }
 
-        private void PrintResults(ICollection<string> items)
+        private void PrintResults<T>(ICollection<T> items)
         {
             Console.WriteLine(string.Join(" ", items));
         }
@@ -60,14 +60,9 @@
         private void AddOperations()
         {
             AddItemsInCollections();
-            PrintAddResults(this.addCollectionResults);
-            PrintAddResults(this.addRemoveCollectionResults);
-            PrintAddResults(this.myListResults);
-        }
-
-        private void PrintAddResults(ICollection<int> collection)
-        {
-            Console.WriteLine(string.Join(" ", collection));
+            PrintResults(this.addCollectionResults);
+            PrintResults(this.addRemoveCollectionResults);
+            PrintResults(this.myListResults);
         }
 
         private void AddItemsInCollections()

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("01.ListyIterator")]
+[assembly: AssemblyTitle("03.Stack")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("01.ListyIterator")]
+[assembly: AssemblyProduct("03.Stack")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("f3a900df-4d35-41e1-88ce-1850a3a16fb6")]
+[assembly: Guid("cc9b4c84-e250-488c-a7dd-f84bfa04c499")]
 
 // Version information for an assembly consists of the following four values:
 //

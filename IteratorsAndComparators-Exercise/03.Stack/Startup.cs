@@ -1,7 +1,7 @@
-﻿namespace _01.ListyIterator
-{
-    using Core;
+﻿using _03.Stack.Core;
 
+namespace _03.Stack
+{
     class Startup
     {
         static void Main(string[] args)

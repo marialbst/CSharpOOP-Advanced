@@ -1,4 +1,4 @@
-﻿namespace _01.ListyIterator.Interfaces
+﻿namespace _01_02.ListyIterator.Interfaces
 {
     public interface IEngine
     {

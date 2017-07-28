@@ -23,7 +23,7 @@
                 case "Pet": this.CreatePet(input[1], int.Parse(input[2]), input[3]); break;
                 case "Clinic": this.CreateClinic(input[1], int.Parse(input[2])); break;
                 default:
-                    throw new InvalidOperationException("Invalid operation");
+                    throw new InvalidOperationException("Invalid Operation!");
             }
         }
 
@@ -59,12 +59,25 @@
 
         public bool ReleasePet(string[] input)
         {
-            return false;
+            string clinicName = input[0];
+            return this.GetClinicByName(clinicName).Release();
         }
 
-        internal void Print(string[] arguments)
+        public void Print(string[] arguments)
         {
-            
+            Clinic clinic = this.GetClinicByName(arguments[0]);
+            if (arguments.Length == 1)
+            {
+                clinic.Print();
+            }
+            else if(arguments.Length == 2)
+            {
+                clinic.Print(int.Parse(arguments[1]));
+            }
+            else
+            {
+                throw new InvalidOperationException("Invalid Operation!");
+            }
         }
     }
 }

@@ -9,7 +9,7 @@
         {
             if (roomsCount % 2 == 0)
             {
-                throw new InvalidOperationException("Invalid operation");
+                throw new InvalidOperationException("Invalid Operation!");
             }
 
             this.Rooms = new Room[roomsCount];
@@ -32,24 +32,27 @@
                 return false;
             }
 
-            for (int i = this.Rooms.Length/2; i < this.Rooms.Length; i++)
+            int startIndex = this.Rooms.Length/2;
+            int count = 1;
+
+            for (int i = 0; i < this.Rooms.Length; i++)
             {
-                if(this.Rooms[i].Patient == null)
+                if(this.Rooms[startIndex].Patient == null)
                 {
-                    this.Rooms[i].Patient = pet;
+                    this.Rooms[startIndex].Patient = pet;
                     return true;
                 }
-            }
 
-            for (int i = 0; i < this.Rooms.Length/2; i++)
-            {
-                if (this.Rooms[i].Patient == null)
+                if (startIndex < this.Rooms.Length / 2)
                 {
-                    this.Rooms[i].Patient = pet;
-                    return true;
+                    startIndex = this.Rooms.Length / 2 + count;
+                    count++;
+                }
+                else
+                {
+                    startIndex = this.Rooms.Length / 2 - count;
                 }
             }
-
             return false;
         }
 

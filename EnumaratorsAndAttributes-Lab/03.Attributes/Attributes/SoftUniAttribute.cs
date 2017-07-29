@@ -1,12 +1,15 @@
-﻿using System;
-
-[AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
-public class SoftUniAttribute : Attribute
+﻿namespace _03.Attributes.Attributes
 {
-    public SoftUniAttribute(string name)
-    {
-        this.Name = name;
-    }
+    using System;
 
-    public string Name { get; set; }
+    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
+    public class SoftUniAttribute : Attribute
+    {
+        public SoftUniAttribute(string name)
+        {
+            this.Name = name;
+        }
+
+        public string Name { get; set; }
+    }
 }

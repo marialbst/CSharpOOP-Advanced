@@ -16,7 +16,7 @@
             this.SecondPlayer = new Player(player2Name);
         }
 
-        public IList<string> CardsInPlay { get; set; }
+        private IList<string> CardsInPlay { get; set; }
 
         public IList<string> DeckOfCards { get; set; }
 
@@ -51,7 +51,7 @@
             this.CardsInPlay.Add(cardString);
         }
 
-        public Player Winner()
+        private Player Winner()
         {
             if (this.FirstPlayer.MaxPowerCard().CompareTo(this.SecondPlayer.MaxPowerCard()) > 0)
             {

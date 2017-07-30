@@ -45,7 +45,6 @@
                 {
                     Console.WriteLine(ei.Message);
                 }
-                
             }
 
             while (game.SecondPlayer.Cards.Count != 5)

@@ -17,18 +17,14 @@ namespace _02BlackBoxInteger.Core
         private int MethodResult(string methodName, int value)
         {
             MethodInfo method = typeof(BlackBoxInt).GetMethod(methodName, BindingFlags.Instance | BindingFlags.NonPublic);
-            ConstructorInfo construct = typeof(BlackBoxInt).GetConstructor(BindingFlags.Instance | BindingFlags.NonPublic, typeof(BlackBoxInt));
-            BlackBoxInt blBoxInstance = (BlackBoxInt)construct.Invoke(new object[] {});
-            method.Invoke(blBoxInstance, new object[] { value });
+            ConstructorInfo construct =
+                typeof(BlackBoxInt).GetConstructor(BindingFlags.Instance | BindingFlags.NonPublic, null,
+                    new[] {typeof(int)}, null);
+            BlackBoxInt blBoxInstance = (BlackBoxInt) construct.Invoke(new object[] {0});
+            //method.Invoke(blBoxInstance, new object[] {value});
             FieldInfo field = typeof(BlackBoxInt).GetField("innerValue", BindingFlags.Instance | BindingFlags.NonPublic);
-            return (int)field.GetValue(blBoxInstance);
+            field.SetValue(blBoxInstance, method.Invoke(blBoxInstance, new object[] { value }) );
+            return (int) field.GetValue(blBoxInstance);
         }
-        
-
-
-        //MethodInfo dynMethod = this.GetType().GetMethod("Draw_" + itemType,
-        //    BindingFlags.NonPublic | BindingFlags.Instance);
-        //        dynMethod.Invoke(this, new object[] { methodParams
-        //    });
     }
 }

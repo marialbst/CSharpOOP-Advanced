@@ -1,14 +1,17 @@
 ﻿namespace _03BarracksFactory.Core.Factories
 {
-    using System;
     using Contracts;
+    using System;
 
     public class UnitFactory : IUnitFactory
     {
+        private string nameSpace = "_03BarracksFactory.Models.Units.";
+
         public IUnit CreateUnit(string unitType)
         {
-            //TODO: implement for Problem 3
-            throw new NotImplementedException();
+            //Problem 3
+            Type desirableUnitType = Type.GetType(this.nameSpace + unitType);
+            return (IUnit)Activator.CreateInstance(desirableUnitType);
         }
     }
 }

@@ -1,19 +1,26 @@
 ﻿namespace _03BarracksFactory.Core.Commands
 {
+    using Attributes;
     using Contracts;
 
     public class AddUnitCommand : Command
     {
-        public AddUnitCommand(string[] data, IRepository repository, IUnitFactory factory) 
-            : base(data, repository, factory)
+        [Inject]
+        private IRepository repository;
+
+        [Inject]
+        private IUnitFactory factory;
+
+        public AddUnitCommand(string[] data) 
+            : base(data)
         {
         }
 
         public override string Execute()
         {
             string unitType = this.Data[1];
-            IUnit unitToAdd = this.Factory.CreateUnit(unitType);
-            this.Repository.AddUnit(unitToAdd);
+            IUnit unitToAdd = this.factory.CreateUnit(unitType);
+            this.repository.AddUnit(unitToAdd);
             return unitType + " added!"; 
         }
     }

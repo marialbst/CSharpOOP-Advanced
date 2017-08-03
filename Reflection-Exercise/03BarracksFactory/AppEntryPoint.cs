@@ -11,7 +11,8 @@
         {
             IRepository repository = new UnitRepository();
             IUnitFactory unitFactory = new UnitFactory();
-            IRunnable engine = new Engine(repository, unitFactory);
+            ICommandInterpreter interpreter = new CommandInterpreter(repository, unitFactory);
+            IRunnable engine = new Engine(interpreter);
             engine.Run();
         }
     }

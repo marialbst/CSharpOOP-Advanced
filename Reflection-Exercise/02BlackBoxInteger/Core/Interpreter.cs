@@ -5,6 +5,16 @@ namespace _02BlackBoxInteger.Core
 {
     public class Interpreter
     {
+        private ConstructorInfo construct;
+        private BlackBoxInt blBoxInstance;
+
+        public Interpreter()
+        {
+            this.construct = typeof(BlackBoxInt).GetConstructor(BindingFlags.Instance | BindingFlags.NonPublic, null,
+                    Type.EmptyTypes, null);
+            this.blBoxInstance = (BlackBoxInt)construct.Invoke(new object[] { });
+        }
+
         public void PrintResult(string input)
         {
             string[] parameters = input.Split('_');
@@ -17,14 +27,9 @@ namespace _02BlackBoxInteger.Core
         private int MethodResult(string methodName, int value)
         {
             MethodInfo method = typeof(BlackBoxInt).GetMethod(methodName, BindingFlags.Instance | BindingFlags.NonPublic);
-            ConstructorInfo construct =
-                typeof(BlackBoxInt).GetConstructor(BindingFlags.Instance | BindingFlags.NonPublic, null,
-                    new[] {typeof(int)}, null);
-            BlackBoxInt blBoxInstance = (BlackBoxInt) construct.Invoke(new object[] {0});
-            //method.Invoke(blBoxInstance, new object[] {value});
+            method.Invoke(this.blBoxInstance, new object[] { value });
             FieldInfo field = typeof(BlackBoxInt).GetField("innerValue", BindingFlags.Instance | BindingFlags.NonPublic);
-            field.SetValue(blBoxInstance, method.Invoke(blBoxInstance, new object[] { value }) );
-            return (int) field.GetValue(blBoxInstance);
+            return (int)field.GetValue(this.blBoxInstance);
         }
     }
 }

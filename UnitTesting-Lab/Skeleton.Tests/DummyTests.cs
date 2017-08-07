@@ -52,20 +52,18 @@
             this.dummy = new Dummy(DeadDummyHealth, DummyExp);
 
             //Act
-            this.dummy.IsDead();
+           int exp = this.dummy.GiveExperience();
 
             //Assert
-            Assert.AreEqual(DummyExp, this.dummy.GiveExperience(), "Dummy does not give XP after his dead.");
+            Assert.AreEqual(DummyExp, exp, "Dummy does not give XP after his dead.");
         }
 
         [Test]
         public void AliveDummyNotGiveExp()
         {
-            //Act
-            this.dummy.IsDead();
-
             //Assert
-            Assert.Throws<InvalidOperationException>(() => this.dummy.GiveExperience(), "Dummy gives XP even if he's alive.");
+            InvalidOperationException ex = Assert.Throws<InvalidOperationException>(() => this.dummy.GiveExperience());
+            Assert.AreEqual("Target is not dead.", ex.Message, "Dummy is dead");
         }
     }
 }
